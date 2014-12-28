@@ -16,6 +16,8 @@
         android:name="android.hardware.camera"
         android:required="true" />
 
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:name=".RibbitApplication"
         android:allowBackup="true"
@@ -55,7 +57,17 @@
         <activity
             android:name=".RecipientsActivity"
             android:label="@string/title_activity_recipients"
-            android:parentActivityName=".MainActivity" android:screenOrientation="portrait">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cecilerm.ribbit.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ViewImageActivity"
+            android:label="@string/title_activity_view_image"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.cecilerm.ribbit.MainActivity" />
