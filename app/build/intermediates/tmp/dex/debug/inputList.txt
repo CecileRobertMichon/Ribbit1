@@ -1,0 +1,4 @@
+/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/build/intermediates/classes/debug
+/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/build/intermediates/pre-dexed/debug/commons-io-2.4-2c649d7cf9baa996afcf025d3d860d10692bf551.jar
+/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/build/intermediates/pre-dexed/debug/Parse-1.5.1-863e1539d7e18fcadcd3c9e5715eabb80e457cc3.jar
+/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/build/intermediates/pre-dexed/debug/android-support-v13-2f7bf73a839958106b33dc3eb082c32db26930a8.jar

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/libs/commons-io-2.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/build/intermediates/pre-dexed/debug/commons-io-2.4-2c649d7cf9baa996afcf025d3d860d10692bf551.jar" />
+    </item>
+    <item
+        jar="/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/libs/android-support-v13.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="41c6fb0537e463f685d3235fc50d38dc540d6ece">
+        <dex dex="/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/build/intermediates/pre-dexed/debug/android-support-v13-2f7bf73a839958106b33dc3eb082c32db26930a8.jar" />
+    </item>
+    <item
+        jar="/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/build/intermediates/pre-dexed/debug/classes-df7c80e429eafe82dd2f178a10abb837312cda6a.jar" />
+    </item>
+    <item
+        jar="/Users/cecilerobertm/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-aa1d8c02ff94305bd0242257e0c313e13f5368ea.jar" />
+    </item>
+    <item
+        jar="/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-99b7e9bbbd675fa46d6c60a0877c1d64a9dbd9f4.jar" />
+    </item>
+    <item
+        jar="/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/libs/Parse-1.5.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3d645417e7780d44f32e29a3ec6b729b75aef26c">
+        <dex dex="/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/build/intermediates/pre-dexed/debug/Parse-1.5.1-863e1539d7e18fcadcd3c9e5715eabb80e457cc3.jar" />
+    </item>
+
+</items>
