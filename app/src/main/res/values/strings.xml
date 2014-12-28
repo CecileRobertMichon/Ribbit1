@@ -9,12 +9,12 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_login">LoginActivity</string>
     <string android:id="@+id/string1" name="password_hint" android:layout_width="wrap_content" android:layout_height="wrap_content">Password</string>
-    <string android:id="@+id/string1" name="username_hint" android:layout_width="wrap_content" android:layout_height="wrap_content">Username</string>
+    <string android:id="@+id/string1" name="username_hint" android:layout_width="wrap_content" android:layout_height="wrap_content">Username (Case Sensitive)</string>
     <string android:id="@+id/string1" name="login_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content">Login</string>
     <string android:id="@+id/string1" name="signup_text" android:layout_width="wrap_content" android:layout_height="wrap_content">Sign Up</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string android1:id="@+id/string1" name="email_hint" android1:layout_width="wrap_content" android1:layout_height="wrap_content">Email</string>
-    <string android1:id="@+id/string1" name="signup_error_message" android1:layout_width="wrap_content" android1:layout_height="wrap_content">Please make sure you enter a username, password and email address</string>
+    <string android1:id="@+id/string1" name="signup_error_message" android1:layout_width="wrap_content" android1:layout_height="wrap_content">Please make sure all fields are filled</string>
     <string android1:id="@+id/string1" name="signup_error_title" android1:layout_width="wrap_content" android1:layout_height="wrap_content">Oops!</string>
     <string android1:id="@+id/string1" name="login_error_message" android1:layout_width="wrap_content" android1:layout_height="wrap_content">Please make sure you enter a valid username and password</string>
     <string android1:id="@+id/string1" name="login_error_title" android1:layout_width="wrap_content" android1:layout_height="wrap_content">Oops!</string>
@@ -51,5 +51,10 @@
     <string name="success_message">Message sent!</string>
     <string name="error_sending_message">Something went wrong... Please try again</string>
     <string name="title_activity_view_image">Ribbit</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="age_hint">Age</string>
+    <string name="hometown_hint">Hometown</string>
+    <string name="title_activity_profile">ProfileActivity</string>
 
 </resources>

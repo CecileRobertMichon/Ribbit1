@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.cecilerm.ribbit.ProfileActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/username"
+        android:text="Username"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/userIcon"
+        android:layout_marginTop="25dp" />
+
+    <ImageView
+        android:id="@+id/userIcon"
+        android:src="@drawable/imageedit_6_8227381736"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name : "
+        android:id="@+id/firstNameLabel"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="30dp"
+        android:layout_below="@+id/userIcon"
+        android:layout_alignLeft="@+id/userIcon"
+        android:layout_alignStart="@+id/userIcon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name : "
+        android:id="@+id/lastNameLabel"
+        android:paddingLeft="30dp"
+        android:layout_below="@+id/firstNameLabel"
+        android:layout_alignLeft="@+id/firstNameLabel"
+        android:layout_alignStart="@+id/firstNameLabel"
+        android:layout_marginTop="@dimen/message_list_item_vertical_margin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age : "
+        android:id="@+id/ageLabel"
+        android:layout_below="@+id/lastNameLabel"
+        android:layout_alignLeft="@+id/hometownLabel"
+        android:layout_alignStart="@+id/hometownLabel"
+        android:layout_marginTop="@dimen/message_list_item_vertical_margin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hometown : "
+        android:id="@+id/hometownLabel"
+        android:layout_below="@+id/ageLabel"
+        android:layout_alignRight="@+id/lastNameLabel"
+        android:layout_alignEnd="@+id/lastNameLabel"
+        android:layout_marginTop="@dimen/message_list_item_vertical_margin" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstName"
+        android:layout_alignBottom="@+id/firstNameLabel"
+        android:layout_toRightOf="@+id/firstNameLabel"
+        android:paddingLeft="@dimen/activity_horizontal_margin" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastName"
+        android:layout_alignBottom="@+id/lastNameLabel"
+        android:layout_toRightOf="@+id/lastNameLabel"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:layout_alignRight="@+id/firstName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/age"
+        android:layout_alignBottom="@+id/ageLabel"
+        android:layout_toRightOf="@+id/ageLabel"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:layout_alignLeft="@+id/firstName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hometown"
+        android:layout_alignBottom="@+id/hometownLabel"
+        android:layout_toRightOf="@+id/hometownLabel"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:layout_alignLeft="@+id/firstName"/>
+</RelativeLayout>
+<!-- From: file:/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/src/main/res/layout/activity_profile.xml -->

@@ -21,6 +21,10 @@ public class SignUpActivity extends Activity {
 	protected EditText mUsername;
 	protected EditText mPassword;
 	protected EditText mEmail;
+    protected EditText mFirstName;
+    protected EditText mLastName;
+    protected EditText mAge;
+    protected EditText mHometown;
 	protected Button mSignUpButton;
 
 	@Override
@@ -32,20 +36,24 @@ public class SignUpActivity extends Activity {
 		mUsername = (EditText) findViewById(R.id.usernameField);
 		mPassword = (EditText) findViewById(R.id.passwordField);
 		mEmail = (EditText) findViewById(R.id.emailField);
+        mFirstName = (EditText) findViewById(R.id.firstNameField);
+        mLastName = (EditText) findViewById(R.id.lastNameField);
+        mAge = (EditText) findViewById(R.id.ageField);
+        mHometown = (EditText) findViewById(R.id.hometownField);
 		mSignUpButton = (Button) findViewById(R.id.SignUpButton);
 		mSignUpButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				String username = mUsername.getText().toString();
-				String password = mPassword.getText().toString();
-				String email = mEmail.getText().toString();
+				String username = mUsername.getText().toString().trim();
+				String password = mPassword.getText().toString().trim();
+				String email = mEmail.getText().toString().trim();
+                String firstName = mFirstName.getText().toString().trim();
+                String lastName = mLastName.getText().toString().trim();
+                String age = mAge.getText().toString().trim();
+                String hometown = mHometown.getText().toString().trim();
 
-				username = username.trim();
-				password = password.trim();
-				email = email.trim();
-
-				if (username.isEmpty() || password.isEmpty() || email.isEmpty()) {
+				if (username.isEmpty() || password.isEmpty() || email.isEmpty() || firstName.isEmpty() || lastName.isEmpty() || age.isEmpty() || hometown.isEmpty()) {
 					AlertDialog.Builder builder = new AlertDialog.Builder(
 							SignUpActivity.this);
 					builder.setMessage(R.string.signup_error_message)
@@ -61,6 +69,11 @@ public class SignUpActivity extends Activity {
 					newUser.setUsername(username);
 					newUser.setPassword(password);
 					newUser.setEmail(email);
+                    newUser.put("firstName", firstName);
+                    newUser.put("lastName", lastName);
+                    newUser.put("age", age);
+                    newUser.put("hometown", hometown);
+
 					newUser.signUpInBackground(new SignUpCallback() {
 
 						@Override

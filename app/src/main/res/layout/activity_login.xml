@@ -15,6 +15,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="18dp"
+        android:paddingTop="@dimen/activity_vertical_margin"
         android:ems="10"
         android:hint="@string/username_hint" >
 
@@ -45,17 +46,18 @@
         android:id="@+id/ForgotPasswordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/forgot_password_text"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/forgot_password_text" />
+        android:layout_marginBottom="46dp" />
     
     <TextView
         android:id="@+id/SignUpText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/signup_text" />
+        android:text="@string/signup_text"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
     
     
     

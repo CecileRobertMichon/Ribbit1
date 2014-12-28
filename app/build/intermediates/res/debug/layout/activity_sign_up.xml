@@ -17,7 +17,6 @@
         android:layout_marginLeft="18dp"
         android:ems="10"
         android:hint="@string/username_hint" >
-
         <requestFocus />
     </EditText>
 
@@ -27,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/usernameField"
         android:layout_below="@+id/usernameField"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:ems="10"
         android:hint="@string/password_hint"
         android:inputType="textPassword" />
@@ -38,18 +37,62 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/passwordField"
         android:layout_below="@+id/passwordField"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:ems="10"
         android:hint="@string/email_hint"
         android:inputType="textEmailAddress" />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/firstNameField"
+        android:layout_below="@+id/emailField"
+        android:layout_alignLeft="@+id/emailField"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:hint="@string/first_name_hint"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/lastNameField"
+        android:layout_below="@+id/firstNameField"
+        android:layout_alignLeft="@+id/firstNameField"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:hint="@string/last_name_hint" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/ageField"
+        android:layout_below="@+id/lastNameField"
+        android:layout_alignLeft="@+id/lastNameField"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:hint="@string/age_hint" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hometownField"
+        android:layout_below="@+id/ageField"
+        android:layout_alignLeft="@+id/ageField"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:hint="@string/hometown_hint" />
 
     <Button
         android:id="@+id/SignUpButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/emailField"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
-        android:text="@string/signup_text" />
+        android:text="@string/signup_text"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/ageField"
+        android:layout_marginBottom="40dp" />
 
 </RelativeLayout><!-- From: file:/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/src/main/res/layout/activity_sign_up.xml -->

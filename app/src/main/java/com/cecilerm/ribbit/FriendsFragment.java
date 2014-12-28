@@ -3,6 +3,7 @@ package com.cecilerm.ribbit;
 import java.util.List;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -80,4 +82,18 @@ public class FriendsFragment extends ListFragment {
 		});
 	}
 
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+
+        ParseUser friend = mFriends.get(position);
+        // start profile activity
+        Intent intent = new Intent(getActivity(), ProfileActivity.class);
+        intent.putExtra("username", friend.getUsername());
+        intent.putExtra("firstName", friend.getString("firstName"));
+        intent.putExtra("lastName", friend.getString("lastName"));
+        intent.putExtra("age", friend.getString("age"));
+        intent.putExtra("hometown", friend.getString("hometown"));
+        startActivity(intent);
+    }
 }

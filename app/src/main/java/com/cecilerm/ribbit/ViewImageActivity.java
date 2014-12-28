@@ -33,7 +33,7 @@ public class ViewImageActivity extends Activity {
             public void run() {
                 finish();
             }
-        }, 10 * 1000);
+        }, 5 * 1000);
     }
 
 
