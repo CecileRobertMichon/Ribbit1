@@ -12,6 +12,8 @@ import com.parse.ParseObject;
 
 import java.util.List;
 
+import static android.text.format.DateUtils.getRelativeTimeSpanString;
+
 public class MessageAdapter extends ArrayAdapter<ParseObject> {
 
     protected Context mContext;
@@ -20,7 +22,6 @@ public class MessageAdapter extends ArrayAdapter<ParseObject> {
     public MessageAdapter(Context context, List<ParseObject> messages) {
         super(context, R.layout.message_item, messages);
         mContext = context;
-
         mMessages = messages;
 
     }
@@ -34,6 +35,7 @@ public class MessageAdapter extends ArrayAdapter<ParseObject> {
             holder = new ViewHolder();
             holder.iconImageView = (ImageView) convertView.findViewById(R.id.messageIcon);
             holder.nameLabel = (TextView) convertView.findViewById(R.id.senderLabel);
+            holder.timeStamp = (TextView) convertView.findViewById(R.id.timeLabel);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -45,9 +47,10 @@ public class MessageAdapter extends ArrayAdapter<ParseObject> {
         } else if (message.getString(ParseConstants.KEY_FILE_TYPE).equals(ParseConstants.TYPE_VIDEO)){
             holder.iconImageView.setImageResource(R.drawable.ic_action_play_over_video);
         } else {
-            holder.iconImageView.setImageResource(R.drawable.ic_action_chat);
+            holder.iconImageView.setImageResource(R.drawable.ic_action_message);
         }
         holder.nameLabel.setText(message.getString(ParseConstants.KEY_SENDER_NAME));
+        holder.timeStamp.setText(message.getString(ParseConstants.KEY_CREATED_AT));
 
         return convertView;
 
@@ -56,6 +59,7 @@ public class MessageAdapter extends ArrayAdapter<ParseObject> {
     private static class ViewHolder {
         ImageView iconImageView;
         TextView nameLabel;
+        TextView timeStamp;
     }
 
     public void refill(List <ParseObject> messages) {

@@ -3,10 +3,17 @@
     tools:context="com.cecilerm.ribbit.MainActivity" >
 
     <item
+        android:id="@+id/action_chat"
+        android:icon="@drawable/ic_action_chat"
+        android:showAsAction="always"
+        android:title="@string/chat_label"/>
+
+    <item
         android:id="@+id/action_camera"
         android:icon="@drawable/ic_action_camera"
         android:showAsAction="always"
         android:title="@string/camera_label"/>
+
     <item
         android:id="@+id/action_edit_friends"
         android:title="@string/menu_edit_friends_label"/>

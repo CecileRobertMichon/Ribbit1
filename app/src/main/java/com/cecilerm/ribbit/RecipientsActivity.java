@@ -37,6 +37,7 @@ public class RecipientsActivity extends ListActivity {
 	protected Uri mMediaUri;
 	protected String mFileType;
 	protected String mMessageText;
+    protected String mTime;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,8 @@ public class RecipientsActivity extends ListActivity {
 				ParseConstants.KEY_FILE_TYPE);
 		mMessageText = getIntent().getExtras().getString(
 				ParseConstants.KEY_MESSAGE);
+        mTime = "Hello";
+        //mTime = getIntent().getExtras().getString(ParseConstants.KEY_CREATED_AT);
 	}
 
 	@Override
@@ -166,6 +169,7 @@ public class RecipientsActivity extends ListActivity {
 				.getUsername());
 		message.put(ParseConstants.KEY_RECIPIENT_IDS, getRecipientIds());
 		message.put(ParseConstants.KEY_FILE_TYPE, mFileType);
+        message.put(ParseConstants.KEY_CREATED_AT, mTime);
 		if (mFileType.equals(ParseConstants.TYPE_TEXT)) {
 			// Send the text message!
 			message.put(ParseConstants.KEY_MESSAGE, mMessageText);

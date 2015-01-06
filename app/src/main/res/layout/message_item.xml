@@ -12,7 +12,8 @@
         android:src="@drawable/ic_action_picture"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingBottom="@dimen/message_list_item_vertical_margin"
-        android:paddingTop="@dimen/message_list_item_vertical_margin"
+        android:paddingTop="16dp"
+        android:layout_centerVertical="true"
         android:contentDescription="Message Icon" />
 
     <TextView
@@ -24,4 +25,17 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/messageIcon"
         android:paddingLeft="@dimen/activity_horizontal_margin" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:textColor="#848484"
+        android:id="@+id/timeLabel"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:layout_alignLeft="@id/senderLabel"
+        android:layout_below="@+id/senderLabel" />
 </RelativeLayout>

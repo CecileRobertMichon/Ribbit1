@@ -19,6 +19,7 @@
     <string name="age_hint">Age</string>
     <string name="app_name">Ribbit</string>
     <string name="camera_label" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Camera</string>
+    <string name="chat_label">chat</string>
     <string name="email_hint" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Email</string>
     <string name="email_sent_message" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">An email was sent to your email with instructions to reset your password</string>
     <string name="email_sent_title" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Success!</string>
@@ -47,6 +48,7 @@
     <string name="menu_logout_label" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Logout</string>
     <string name="menu_send_label">Send</string>
     <string name="password_hint" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Password</string>
+    <string name="send_text_error_message">Cannot send empty message!</string>
     <string name="signup_error_message" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Please make sure all fields are filled</string>
     <string name="signup_error_title" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Oops!</string>
     <string name="signup_text" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Sign Up</string>
@@ -55,8 +57,10 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="title_activity_recipients">Choose Recipients</string>
+    <string name="title_activity_send_text">SendTextActivity</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="title_activity_view_image">Ribbit</string>
+    <string name="title_activity_view_text">ViewTextActivity</string>
     <string name="title_section1">Inbox</string>
     <string name="title_section2">Friends</string>
     <string name="title_section3">Section 3</string>

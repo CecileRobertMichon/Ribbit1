@@ -49,13 +49,7 @@ public class InboxFragment extends ListFragment {
 				if (e == null){
 					// found messages
 					mMessages = messages;
-					
-					String [] usernames = new String [mMessages.size()];
-					int i = 0;
-					for (ParseObject message : mMessages){
-						usernames[i] = message.getString(ParseConstants.KEY_SENDER_NAME);
-						i++;
-					}
+
 					if (getListView().getAdapter() == null) {
 						MessageAdapter adapter = new MessageAdapter(getListView().getContext(), mMessages);
                         setListAdapter(adapter);
@@ -92,6 +86,10 @@ public class InboxFragment extends ListFragment {
             startActivity(intent);
         } else {
             // text message
+            String messageText = message.getString(ParseConstants.KEY_MESSAGE);
+            Intent intent = new Intent(getActivity(), ViewTextActivity.class);
+            intent.putExtra("chatText", messageText);
+            startActivity(intent);
         }
 
         // Delete message
@@ -104,6 +102,7 @@ public class InboxFragment extends ListFragment {
             ids.remove(ParseUser.getCurrentUser().getObjectId());
 
             ArrayList<String> idsToRemove = new ArrayList<String>();
+            idsToRemove.add(ParseUser.getCurrentUser().getObjectId());
 
             message.removeAll(ParseConstants.KEY_RECIPIENT_IDS, idsToRemove);
             message.saveInBackground();

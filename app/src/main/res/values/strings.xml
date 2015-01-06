@@ -56,5 +56,9 @@
     <string name="age_hint">Age</string>
     <string name="hometown_hint">Hometown</string>
     <string name="title_activity_profile">ProfileActivity</string>
+    <string name="chat_label">chat</string>
+    <string name="title_activity_send_text">SendTextActivity</string>
+    <string name="send_text_error_message">Cannot send empty message!</string>
+    <string name="title_activity_view_text">ViewTextActivity</string>
 
 </resources>

@@ -16,7 +16,7 @@
         android:name="android.hardware.camera"
         android:required="true" />
 
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name="com.cecilerm.ribbit.RibbitApplication"
@@ -75,7 +75,26 @@
         <activity
             android:name="com.cecilerm.ribbit.ProfileActivity"
             android:label="@string/title_activity_profile"
-            android:parentActivityName="com.cecilerm.ribbit.MainActivity" >
+            android:parentActivityName="com.cecilerm.ribbit.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cecilerm.ribbit.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cecilerm.ribbit.SendTextActivity"
+            android:label="@string/title_activity_send_text"
+            android:parentActivityName="com.cecilerm.ribbit.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cecilerm.ribbit.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cecilerm.ribbit.ViewTextActivity"
+            android:label="@string/title_activity_view_text"
+            android:parentActivityName="com.cecilerm.ribbit.MainActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.cecilerm.ribbit.MainActivity" />

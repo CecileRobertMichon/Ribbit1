@@ -1,13 +1,5 @@
 package com.cecilerm.ribbit;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.FragmentTransaction;
@@ -27,6 +19,14 @@ import android.widget.Toast;
 
 import com.parse.ParseAnalytics;
 import com.parse.ParseUser;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends FragmentActivity implements
 		ActionBar.TabListener {
@@ -290,6 +290,8 @@ public class MainActivity extends FragmentActivity implements
 			}
 
 			recipientsIntent.putExtra(ParseConstants.KEY_FILE_TYPE, fileType);
+            String time = Long.toString(System.currentTimeMillis());
+            recipientsIntent.putExtra(ParseConstants.KEY_CREATED_AT, time);
 			startActivity(recipientsIntent);
 		} else if (resultCode != RESULT_CANCELED) {
 			Toast.makeText(this, R.string.general_error, Toast.LENGTH_LONG)
@@ -324,8 +326,8 @@ public class MainActivity extends FragmentActivity implements
 			navigateToLogin();
 			break;
 		case R.id.action_edit_friends:
-			Intent intent = new Intent(this, EditFriendsActivity.class);
-			startActivity(intent);
+            Intent intentEditFriends = new Intent(this, EditFriendsActivity.class);
+			startActivity(intentEditFriends);
 			break;
 		case R.id.action_camera:
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -334,6 +336,10 @@ public class MainActivity extends FragmentActivity implements
 			AlertDialog dialog = builder.create();
 			dialog.show();
 			break;
+        case R.id.action_chat:
+            Intent intentChat = new Intent(this, SendTextActivity.class);
+            startActivity(intentChat);
+            break;
 		}
 		return super.onOptionsItemSelected(item);
 	}
