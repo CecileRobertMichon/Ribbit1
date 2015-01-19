@@ -60,5 +60,8 @@
     <string name="title_activity_send_text">SendTextActivity</string>
     <string name="send_text_error_message">Cannot send empty message!</string>
     <string name="title_activity_view_text">ViewTextActivity</string>
+    <string name="menu_refresh_label">Refresh</string>
+    <string name="title_activity_refresh">RefreshActivity</string>
+    <string name="refresh">Refreshing...</string>
 
 </resources>

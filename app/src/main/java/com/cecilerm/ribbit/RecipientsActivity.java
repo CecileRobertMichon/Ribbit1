@@ -1,8 +1,5 @@
 package com.cecilerm.ribbit;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.net.Uri;
@@ -25,6 +22,11 @@ import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
+
 public class RecipientsActivity extends ListActivity {
 
 	public static final String TAG = RecipientsActivity.class.getSimpleName();
@@ -37,7 +39,7 @@ public class RecipientsActivity extends ListActivity {
 	protected Uri mMediaUri;
 	protected String mFileType;
 	protected String mMessageText;
-    protected String mTime;
+    protected Date mTime;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +53,9 @@ public class RecipientsActivity extends ListActivity {
 				ParseConstants.KEY_FILE_TYPE);
 		mMessageText = getIntent().getExtras().getString(
 				ParseConstants.KEY_MESSAGE);
-        mTime = "Hello";
+        mTime = new Date();
         //mTime = getIntent().getExtras().getString(ParseConstants.KEY_CREATED_AT);
-	}
+    }
 
 	@Override
 	public void onResume() {
@@ -131,7 +133,6 @@ public class RecipientsActivity extends ListActivity {
 				dialog.show();
 			} else {
 				send(message);
-				finish();
 			}
 			return true;
 		}
@@ -147,7 +148,9 @@ public class RecipientsActivity extends ListActivity {
 					// Success!
 					Toast.makeText(RecipientsActivity.this,
 							R.string.success_message, Toast.LENGTH_LONG).show();
+                    finish();
 				} else {
+                    e.printStackTrace();
 					AlertDialog.Builder builder = new AlertDialog.Builder(
 							RecipientsActivity.this);
 					builder.setTitle(R.string.error_selecting_file_title)

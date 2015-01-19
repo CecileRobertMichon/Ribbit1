@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.parse.ParseObject;
 
+import java.util.Date;
 import java.util.List;
 
 import static android.text.format.DateUtils.getRelativeTimeSpanString;
@@ -50,7 +51,15 @@ public class MessageAdapter extends ArrayAdapter<ParseObject> {
             holder.iconImageView.setImageResource(R.drawable.ic_action_message);
         }
         holder.nameLabel.setText(message.getString(ParseConstants.KEY_SENDER_NAME));
-        holder.timeStamp.setText(message.getString(ParseConstants.KEY_CREATED_AT));
+        Date start = message.getDate(ParseConstants.KEY_CREATED_AT);
+        try {
+            long startTime = start.getTime();
+            System.out.println(startTime);
+            holder.timeStamp.setText(getRelativeTimeSpanString(startTime));
+
+        } catch (NullPointerException e) {
+            System.out.println("No date!");
+        }
 
         return convertView;
 

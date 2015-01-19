@@ -41,10 +41,10 @@ public class SendTextActivity extends Activity {
                     // start recipient activity
                     Intent recipientsIntent = new Intent(SendTextActivity.this, RecipientsActivity.class);
                     String fileType = ParseConstants.TYPE_TEXT;
-                    String time = Long.toString(System.currentTimeMillis());
+                    //String time = Long.toString(System.currentTimeMillis());
                     recipientsIntent.putExtra(ParseConstants.KEY_MESSAGE, message);
                     recipientsIntent.putExtra(ParseConstants.KEY_FILE_TYPE, fileType);
-                    recipientsIntent.putExtra(ParseConstants.KEY_CREATED_AT, time);
+                    //recipientsIntent.putExtra(ParseConstants.KEY_CREATED_AT, time);
                     startActivity(recipientsIntent);
                     setProgressBarVisibility(false);
                     finish();

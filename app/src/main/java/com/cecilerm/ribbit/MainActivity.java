@@ -307,7 +307,7 @@ public class MainActivity extends FragmentActivity implements
 		startActivity(intent);
 	}
 
-	@Override
+    @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
@@ -321,6 +321,10 @@ public class MainActivity extends FragmentActivity implements
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		switch (id) {
+        case R.id.action_refresh:
+            Intent refresh = new Intent(this, RefreshActivity.class);
+            startActivity(refresh);
+            break;
 		case R.id.action_logout:
 			ParseUser.logOut();
 			navigateToLogin();

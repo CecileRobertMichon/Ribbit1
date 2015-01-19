@@ -159,3 +159,11 @@ ADDED from AndroidManifest.xml:93:9
 		ADDED from AndroidManifest.xml:96:13
 	android:name
 		ADDED from AndroidManifest.xml:94:13
+activity#com.cecilerm.ribbit.RefreshActivity
+ADDED from AndroidManifest.xml:102:9
+	android:label
+		ADDED from AndroidManifest.xml:104:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:105:13
+	android:name
+		ADDED from AndroidManifest.xml:103:13
