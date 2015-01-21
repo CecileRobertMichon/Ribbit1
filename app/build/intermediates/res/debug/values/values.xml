@@ -8,6 +8,12 @@
         <item ns1:id="@+id/choose_picture" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Choose Picture</item>
         <item ns1:id="@+id/choose_video" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Choose Video</item>
     </string-array>
+    <!-- From: file:/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="apptheme_color">#9966cc</color>
+    <color name="background_purple">#543978</color>
+    <color name="hint_grey">#bbbbbb</color>
+    <color name="white_text">#FFFFFF</color>
     <!-- From: file:/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
@@ -20,6 +26,7 @@
     <string name="app_name">Ribbit</string>
     <string name="camera_label" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Camera</string>
     <string name="chat_label">chat</string>
+    <string name="content_desc_background">Ribbit Frog Background Image</string>
     <string name="email_hint" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Email</string>
     <string name="email_sent_message" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">An email was sent to your email with instructions to reset your password</string>
     <string name="email_sent_title" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Success!</string>
@@ -53,7 +60,7 @@
     <string name="send_text_error_message">Cannot send empty message!</string>
     <string name="signup_error_message" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Please make sure all fields are filled</string>
     <string name="signup_error_title" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Oops!</string>
-    <string name="signup_text" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Sign Up</string>
+    <string name="signup_text" ns1:id="@+id/string1" ns1:layout_height="wrap_content" ns1:layout_width="wrap_content">Don\'t have an account yet? Sign Up!</string>
     <string name="success_message">Message sent!</string>
     <string name="title_activity_edit_friends">Edit Friends</string>
     <string name="title_activity_login">LoginActivity</string>
@@ -71,14 +78,20 @@
     <string name="video_file_size_warning">warning</string>
     <!-- From: file:/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/src/main/res/values/styles.xml -->
     <eat-comment/>
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
+    <style name="AppTheme" parent="@style/_AppTheme"/>
+    <style name="ButtonAppTheme" parent="android:Widget.Holo.Light.Button">
+        <item name="android:background">@drawable/apptheme_btn_default_holo_light</item>
     </style>
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    <style name="ImageButtonAppTheme" parent="android:Widget.Holo.Light.ImageButton">
+        <item name="android:background">@drawable/apptheme_btn_default_holo_light</item>
+    </style>
+    <style name="_AppTheme" parent="android:Theme.Holo.Light">
+
+        <item name="android:editTextBackground">@drawable/apptheme_edit_text_holo_light</item>
+
+        <item name="android:buttonStyle">@style/ButtonAppTheme</item>
+
+        <item name="android:imageButtonStyle">@style/ImageButtonAppTheme</item>
+
     </style>
 </resources>
