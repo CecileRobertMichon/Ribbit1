@@ -9,5 +9,9 @@
     <color name="pressed_purple_button">#ba9dda</color>
     <color name="focused_purple_button">#D6C3ED</color>
     <color name="light_purple_background">#e9e4ed</color>
+    <color name="swipe_refresh_1">#482c6f</color>
+    <color name="swipe_refresh_2">#AD78D9</color>
+    <color name="swipe_refresh_3">#DCADF4</color>
+    <color name="swipe_refresh_4">#AD78D9</color>
 
 </resources>

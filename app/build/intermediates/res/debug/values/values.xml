@@ -17,6 +17,10 @@
     <color name="light_purple_background">#e9e4ed</color>
     <color name="light_purple_button">#e1d2f3</color>
     <color name="pressed_purple_button">#ba9dda</color>
+    <color name="swipe_refresh_1">#482c6f</color>
+    <color name="swipe_refresh_2">#AD78D9</color>
+    <color name="swipe_refresh_3">#DCADF4</color>
+    <color name="swipe_refresh_4">#AD78D9</color>
     <color name="white_text">#FFFFFF</color>
     <!-- From: file:/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/src/main/res/values/dimens.xml -->
     <eat-comment/>

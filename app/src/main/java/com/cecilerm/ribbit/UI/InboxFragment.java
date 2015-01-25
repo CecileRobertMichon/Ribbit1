@@ -36,12 +36,16 @@ public class InboxFragment extends ListFragment {
         View rootView = inflater.inflate(R.layout.fragment_inbox, container,
 				false);
         mSwipeRefreshLayout = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeLayout);
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.swipe_refresh_1, R.color.swipe_refresh_2, R.color.swipe_refresh_3, R.color.swipe_refresh_4);
         mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                Toast.makeText(getActivity(), "Refreshing", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), R.string.refresh, Toast.LENGTH_SHORT).show();
+                retrieveMessage();
             }
         };
+        mSwipeRefreshLayout.setOnRefreshListener(mOnRefreshListener);
+
 
         return rootView;
 	}
@@ -51,16 +55,20 @@ public class InboxFragment extends ListFragment {
 		super.onResume();
 		
 		getActivity().setProgressBarIndeterminateVisibility(true);
-		
-		ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(ParseConstants.CLASS_MESSAGES);
-		query.whereEqualTo(ParseConstants.KEY_RECIPIENT_IDS, ParseUser.getCurrentUser().getObjectId());
-		query.orderByDescending(ParseConstants.KEY_CREATED_AT);
+
+        retrieveMessage();
+	}
+
+    private void retrieveMessage() {
+        ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(ParseConstants.CLASS_MESSAGES);
+        query.whereEqualTo(ParseConstants.KEY_RECIPIENT_IDS, ParseUser.getCurrentUser().getObjectId());
+        query.orderByDescending(ParseConstants.KEY_CREATED_AT);
         query.findInBackground(new FindCallback<ParseObject>() {
-			
+
 			@Override
 			public void done(List<ParseObject> messages, ParseException e) {
 				getActivity().setProgressBarIndeterminateVisibility(false);
-				
+
 				if (e == null){
 					// found messages
 					mMessages = messages;
@@ -73,10 +81,13 @@ public class InboxFragment extends ListFragment {
                         ((MessageAdapter)getListView().getAdapter()).refill(mMessages);
                     }
 				}
-				
+
 			}
 		});
-	}
+       if(mSwipeRefreshLayout.isRefreshing()){
+           mSwipeRefreshLayout.setRefreshing(false);
+       }
+    }
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
