@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cecilerm.ribbit.MainActivity$PlaceholderFragment" >
+    tools:context="com.cecilerm.ribbit.UI.MainActivity$PlaceholderFragment" >
 
     <TextView
         android:id="@android:id/empty"
@@ -10,12 +10,22 @@
         android:layout_height="wrap_content"
         android:text="@string/empty_inbox_label" />
 
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="@dimen/inbox_vertical_margin">
     </ListView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout><!-- From: file:/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/src/main/res/layout/fragment_inbox.xml -->

@@ -10,7 +10,7 @@
     <string name="title_activity_login">LoginActivity</string>
     <string android:id="@+id/string1" name="password_hint" android:layout_width="wrap_content" android:layout_height="wrap_content">Password</string>
     <string android:id="@+id/string1" name="username_hint" android:layout_width="wrap_content" android:layout_height="wrap_content">Username (Case Sensitive)</string>
-    <string android:id="@+id/string1" name="login_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content">Login</string>
+    <string android:id="@+id/string1" name="login_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content">SIGN IN</string>
     <string android:id="@+id/string1" name="signup_text" android:layout_width="wrap_content" android:layout_height="wrap_content">Don\'t have an account yet? Sign Up!</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string android1:id="@+id/string1" name="email_hint" android1:layout_width="wrap_content" android1:layout_height="wrap_content">Email</string>
@@ -64,5 +64,7 @@
     <string name="title_activity_refresh">RefreshActivity</string>
     <string name="refresh">Refreshing...</string>
     <string name="content_desc_background">Ribbit Frog Background Image</string>
+    <string name="signup_button_text">SIGN UP</string>
+    <string name="cancel_button_text">CANCEL</string>
 
 </resources>

@@ -1,16 +1,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.cecilerm.ribbit.MainActivity" >
+    tools:context="com.cecilerm.ribbit.UI.MainActivity" >
 
     <item
         android:id="@+id/action_chat"
-        android:icon="@drawable/ic_action_chat"
+        android:icon="@drawable/ic_menu_send"
         android:showAsAction="always"
         android:title="@string/chat_label"/>
 
     <item
         android:id="@+id/action_camera"
-        android:icon="@drawable/ic_action_camera"
+        android:icon="@drawable/ic_menu_camera"
         android:showAsAction="always"
         android:title="@string/camera_label"/>
 

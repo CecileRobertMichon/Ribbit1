@@ -23,9 +23,9 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.Ribbit" >
         <activity
-            android:name="com.cecilerm.ribbit.MainActivity"
+            android:name="com.cecilerm.ribbit.UI.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -35,77 +35,77 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.cecilerm.ribbit.LoginActivity"
+            android:name="com.cecilerm.ribbit.UI.LoginActivity"
             android:label="@string/title_activity_login"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.cecilerm.ribbit.SignUpActivity"
+            android:name="com.cecilerm.ribbit.UI.SignUpActivity"
             android:label="@string/title_activity_sign_up"
-            android:parentActivityName="com.cecilerm.ribbit.LoginActivity"
+            android:parentActivityName="com.cecilerm.ribbit.UI.LoginActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.cecilerm.ribbit.EditFriendsActivity"
+            android:name="com.cecilerm.ribbit.UI.EditFriendsActivity"
             android:label="@string/title_activity_edit_friends"
-            android:parentActivityName="com.cecilerm.ribbit.MainActivity"
+            android:parentActivityName="com.cecilerm.ribbit.UI.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.cecilerm.ribbit.MainActivity" />
+                android:value=".UI.MainActivity" />
         </activity>
         <activity
-            android:name="com.cecilerm.ribbit.RecipientsActivity"
+            android:name="com.cecilerm.ribbit.UI.RecipientsActivity"
             android:label="@string/title_activity_recipients"
-            android:parentActivityName="com.cecilerm.ribbit.MainActivity"
+            android:parentActivityName="com.cecilerm.ribbit.UI.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.cecilerm.ribbit.MainActivity" />
+                android:value=".UI.MainActivity" />
         </activity>
         <activity
-            android:name="com.cecilerm.ribbit.ViewImageActivity"
+            android:name="com.cecilerm.ribbit.UI.ViewImageActivity"
             android:label="@string/title_activity_view_image"
-            android:parentActivityName="com.cecilerm.ribbit.MainActivity"
+            android:parentActivityName="com.cecilerm.ribbit.UI.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.cecilerm.ribbit.MainActivity" />
+                android:value=".UI.MainActivity" />
         </activity>
         <activity
-            android:name="com.cecilerm.ribbit.ProfileActivity"
+            android:name="com.cecilerm.ribbit.UI.ProfileActivity"
             android:label="@string/title_activity_profile"
-            android:parentActivityName="com.cecilerm.ribbit.MainActivity"
+            android:parentActivityName="com.cecilerm.ribbit.UI.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.cecilerm.ribbit.MainActivity" />
+                android:value=".UI.MainActivity" />
         </activity>
         <activity
-            android:name="com.cecilerm.ribbit.SendTextActivity"
+            android:name="com.cecilerm.ribbit.UI.SendTextActivity"
             android:label="@string/title_activity_send_text"
-            android:parentActivityName="com.cecilerm.ribbit.MainActivity"
+            android:parentActivityName="com.cecilerm.ribbit.UI.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.cecilerm.ribbit.MainActivity" />
+                android:value=".UI.MainActivity" />
         </activity>
         <activity
-            android:name="com.cecilerm.ribbit.ViewTextActivity"
+            android:name="com.cecilerm.ribbit.UI.ViewTextActivity"
             android:label="@string/title_activity_view_text"
-            android:parentActivityName="com.cecilerm.ribbit.MainActivity"
+            android:parentActivityName="com.cecilerm.ribbit.UI.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.cecilerm.ribbit.MainActivity" />
+                android:value=".UI.MainActivity" />
         </activity>
         <activity
-            android:name="com.cecilerm.ribbit.RefreshActivity"
+            android:name="com.cecilerm.ribbit.UI.RefreshActivity"
             android:label="@string/title_activity_refresh"
-            android:parentActivityName="com.cecilerm.ribbit.MainActivity" >
+            android:parentActivityName="com.cecilerm.ribbit.UI.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.cecilerm.ribbit.MainActivity" />
+                android:value=".UI.MainActivity" />
         </activity>
     </application>
 

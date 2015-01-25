@@ -1,10 +1,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.cecilerm.ribbit.RecipientsActivity" >
+    tools:context="com.cecilerm.ribbit.UI.RecipientsActivity" >
 
     <item
         android:id="@+id/action_send"
-        android:icon="@drawable/ic_action_send_now"
+        android:icon="@drawable/ic_menu_send"
         android:showAsAction="always"
         android:title="@string/menu_send_label"
         android:visible="false"/>

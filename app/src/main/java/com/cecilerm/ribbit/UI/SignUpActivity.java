@@ -1,0 +1,135 @@
+package com.cecilerm.ribbit.UI;
+
+import android.app.ActionBar;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.cecilerm.ribbit.R;
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
+
+public class SignUpActivity extends Activity {
+
+	protected EditText mUsername;
+	protected EditText mPassword;
+	protected EditText mEmail;
+    protected EditText mFirstName;
+    protected EditText mLastName;
+    protected EditText mAge;
+    protected EditText mHometown;
+	protected Button mSignUpButton;
+    protected Button mCancelButton;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
+		setContentView(R.layout.activity_sign_up);
+        ActionBar actionBar = getActionBar();
+        actionBar.hide();
+
+		mUsername = (EditText) findViewById(R.id.usernameField);
+		mPassword = (EditText) findViewById(R.id.passwordField);
+		mEmail = (EditText) findViewById(R.id.emailField);
+        mFirstName = (EditText) findViewById(R.id.firstNameField);
+        mLastName = (EditText) findViewById(R.id.lastNameField);
+        mAge = (EditText) findViewById(R.id.ageField);
+        mHometown = (EditText) findViewById(R.id.hometownField);
+		mSignUpButton = (Button) findViewById(R.id.SignUpButton);
+        mCancelButton = (Button) findViewById(R.id.CancelButton);
+        mCancelButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+		mSignUpButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				String username = mUsername.getText().toString().trim();
+				String password = mPassword.getText().toString().trim();
+				String email = mEmail.getText().toString().trim();
+                String firstName = mFirstName.getText().toString().trim();
+                String lastName = mLastName.getText().toString().trim();
+                String age = mAge.getText().toString().trim();
+                String hometown = mHometown.getText().toString().trim();
+
+				if (username.isEmpty() || password.isEmpty() || email.isEmpty() || firstName.isEmpty() || lastName.isEmpty() || age.isEmpty() || hometown.isEmpty()) {
+					AlertDialog.Builder builder = new AlertDialog.Builder(
+							SignUpActivity.this);
+					builder.setMessage(R.string.signup_error_message)
+							.setTitle(R.string.signup_error_title)
+							.setPositiveButton(android.R.string.ok, null);
+					AlertDialog dialog = builder.create();
+					dialog.show();
+
+				} else {
+					setProgressBarVisibility(true);
+					// create the new user
+					ParseUser newUser = new ParseUser();
+					newUser.setUsername(username);
+					newUser.setPassword(password);
+					newUser.setEmail(email);
+                    newUser.put("firstName", firstName);
+                    newUser.put("lastName", lastName);
+                    newUser.put("age", age);
+                    newUser.put("hometown", hometown);
+
+					newUser.signUpInBackground(new SignUpCallback() {
+
+						@Override
+						public void done(ParseException e) {
+							setProgressBarIndeterminateVisibility(false);
+							if (e == null) {
+								// Success!
+								Intent intent = new Intent(SignUpActivity.this,
+										MainActivity.class);
+								intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+								intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+								startActivity(intent);
+							} else {
+								AlertDialog.Builder builder = new AlertDialog.Builder(
+										SignUpActivity.this);
+								builder.setMessage(e.getMessage())
+										.setTitle(R.string.signup_error_title)
+										.setPositiveButton(android.R.string.ok,
+												null);
+								AlertDialog dialog = builder.create();
+								dialog.show();
+							}
+
+						}
+					});
+				}
+
+			}
+		});
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.sign_up, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		return super.onOptionsItemSelected(item);
+	}
+}
