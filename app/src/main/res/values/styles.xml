@@ -28,6 +28,7 @@
 
     <style name="LightPurpleBackgroundStyle">
             <item name="android:background">@color/light_purple_background</item>
+            <item name="android:padding">@dimen/user_grid_spacing</item>
     </style>
 
     <style name="Theme.Ribbit.Overflow" parent="@android:style/Widget.ActionButton.Overflow">

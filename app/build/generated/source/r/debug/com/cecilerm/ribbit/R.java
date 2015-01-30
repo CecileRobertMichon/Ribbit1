@@ -33,6 +33,7 @@ public final class R {
         public static final int inbox_horizontal_margin=0x7f060002;
         public static final int inbox_vertical_margin=0x7f060003;
         public static final int message_list_item_vertical_margin=0x7f060004;
+        public static final int user_grid_spacing=0x7f060005;
     }
     public static final class drawable {
         public static final int ab_background_textured_ribbit=0x7f020000;
@@ -110,13 +111,13 @@ public final class R {
         public static final int LoginButton=0x7f0a0006;
         public static final int SignUpButton=0x7f0a0020;
         public static final int SignUpText=0x7f0a0008;
-        public static final int action_camera=0x7f0a002a;
-        public static final int action_chat=0x7f0a0029;
-        public static final int action_edit_friends=0x7f0a002c;
-        public static final int action_logout=0x7f0a002d;
-        public static final int action_refresh=0x7f0a002b;
-        public static final int action_send=0x7f0a002f;
-        public static final int action_settings=0x7f0a002e;
+        public static final int action_camera=0x7f0a002d;
+        public static final int action_chat=0x7f0a002c;
+        public static final int action_edit_friends=0x7f0a002f;
+        public static final int action_logout=0x7f0a0030;
+        public static final int action_refresh=0x7f0a002e;
+        public static final int action_send=0x7f0a0032;
+        public static final int action_settings=0x7f0a0031;
         public static final int age=0x7f0a0012;
         public static final int ageField=0x7f0a001e;
         public static final int ageLabel=0x7f0a000e;
@@ -128,6 +129,7 @@ public final class R {
         public static final int firstName=0x7f0a0010;
         public static final int firstNameField=0x7f0a001c;
         public static final int firstNameLabel=0x7f0a000c;
+        public static final int friendGrid=0x7f0a0025;
         public static final int hometown=0x7f0a0013;
         public static final int hometownField=0x7f0a001f;
         public static final int hometownLabel=0x7f0a000f;
@@ -135,19 +137,21 @@ public final class R {
         public static final int lastName=0x7f0a0011;
         public static final int lastNameField=0x7f0a001d;
         public static final int lastNameLabel=0x7f0a000d;
-        public static final int messageIcon=0x7f0a0026;
+        public static final int messageIcon=0x7f0a0027;
+        public static final int nameLabel=0x7f0a002b;
         public static final int pager=0x7f0a0009;
         public static final int passwordField=0x7f0a0005;
         public static final int refresh_text=0x7f0a0014;
         public static final int sendButton=0x7f0a0017;
         public static final int sendChat=0x7f0a0016;
-        public static final int senderLabel=0x7f0a0027;
+        public static final int senderLabel=0x7f0a0028;
         public static final int subtitleLogin=0x7f0a0002;
         public static final int subtitleSignUp=0x7f0a001a;
-        public static final int swipeLayout=0x7f0a0025;
-        public static final int timeLabel=0x7f0a0028;
+        public static final int swipeLayout=0x7f0a0026;
+        public static final int timeLabel=0x7f0a0029;
         public static final int titleLogin=0x7f0a0001;
         public static final int userIcon=0x7f0a000b;
+        public static final int userImageView=0x7f0a002a;
         public static final int username=0x7f0a000a;
         public static final int usernameField=0x7f0a0004;
     }
@@ -165,6 +169,7 @@ public final class R {
         public static final int fragment_friends=0x7f03000a;
         public static final int fragment_inbox=0x7f03000b;
         public static final int message_item=0x7f03000c;
+        public static final int user_item=0x7f03000d;
     }
     public static final class menu {
         public static final int edit_friends=0x7f090000;
