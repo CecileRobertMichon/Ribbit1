@@ -111,13 +111,13 @@ public final class R {
         public static final int LoginButton=0x7f0a0006;
         public static final int SignUpButton=0x7f0a0020;
         public static final int SignUpText=0x7f0a0008;
-        public static final int action_camera=0x7f0a002d;
-        public static final int action_chat=0x7f0a002c;
-        public static final int action_edit_friends=0x7f0a002f;
-        public static final int action_logout=0x7f0a0030;
-        public static final int action_refresh=0x7f0a002e;
-        public static final int action_send=0x7f0a0032;
-        public static final int action_settings=0x7f0a0031;
+        public static final int action_camera=0x7f0a002e;
+        public static final int action_chat=0x7f0a002d;
+        public static final int action_edit_friends=0x7f0a0030;
+        public static final int action_logout=0x7f0a0031;
+        public static final int action_refresh=0x7f0a002f;
+        public static final int action_send=0x7f0a0033;
+        public static final int action_settings=0x7f0a0032;
         public static final int age=0x7f0a0012;
         public static final int ageField=0x7f0a001e;
         public static final int ageLabel=0x7f0a000e;
@@ -125,11 +125,12 @@ public final class R {
         public static final int backgroundImageSignUp=0x7f0a0018;
         public static final int chatLayout=0x7f0a0015;
         public static final int chatText=0x7f0a0024;
+        public static final int checkImageView=0x7f0a002c;
         public static final int emailField=0x7f0a001b;
         public static final int firstName=0x7f0a0010;
         public static final int firstNameField=0x7f0a001c;
         public static final int firstNameLabel=0x7f0a000c;
-        public static final int friendGrid=0x7f0a0025;
+        public static final int friendGrid=0x7f0a0029;
         public static final int hometown=0x7f0a0013;
         public static final int hometownField=0x7f0a001f;
         public static final int hometownLabel=0x7f0a000f;
@@ -137,18 +138,18 @@ public final class R {
         public static final int lastName=0x7f0a0011;
         public static final int lastNameField=0x7f0a001d;
         public static final int lastNameLabel=0x7f0a000d;
-        public static final int messageIcon=0x7f0a0027;
+        public static final int messageIcon=0x7f0a0026;
         public static final int nameLabel=0x7f0a002b;
         public static final int pager=0x7f0a0009;
         public static final int passwordField=0x7f0a0005;
         public static final int refresh_text=0x7f0a0014;
         public static final int sendButton=0x7f0a0017;
         public static final int sendChat=0x7f0a0016;
-        public static final int senderLabel=0x7f0a0028;
+        public static final int senderLabel=0x7f0a0027;
         public static final int subtitleLogin=0x7f0a0002;
         public static final int subtitleSignUp=0x7f0a001a;
-        public static final int swipeLayout=0x7f0a0026;
-        public static final int timeLabel=0x7f0a0029;
+        public static final int swipeLayout=0x7f0a0025;
+        public static final int timeLabel=0x7f0a0028;
         public static final int titleLogin=0x7f0a0001;
         public static final int userIcon=0x7f0a000b;
         public static final int userImageView=0x7f0a002a;
@@ -156,20 +157,18 @@ public final class R {
         public static final int usernameField=0x7f0a0004;
     }
     public static final class layout {
-        public static final int activity_edit_friends=0x7f030000;
-        public static final int activity_login=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_profile=0x7f030003;
-        public static final int activity_recipients=0x7f030004;
-        public static final int activity_refresh=0x7f030005;
-        public static final int activity_send_text=0x7f030006;
-        public static final int activity_sign_up=0x7f030007;
-        public static final int activity_view_image=0x7f030008;
-        public static final int activity_view_text=0x7f030009;
-        public static final int fragment_friends=0x7f03000a;
-        public static final int fragment_inbox=0x7f03000b;
-        public static final int message_item=0x7f03000c;
-        public static final int user_item=0x7f03000d;
+        public static final int activity_login=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int activity_profile=0x7f030002;
+        public static final int activity_refresh=0x7f030003;
+        public static final int activity_send_text=0x7f030004;
+        public static final int activity_sign_up=0x7f030005;
+        public static final int activity_view_image=0x7f030006;
+        public static final int activity_view_text=0x7f030007;
+        public static final int fragment_inbox=0x7f030008;
+        public static final int message_item=0x7f030009;
+        public static final int user_grid=0x7f03000a;
+        public static final int user_item=0x7f03000b;
     }
     public static final class menu {
         public static final int edit_friends=0x7f090000;
@@ -251,7 +250,7 @@ public final class R {
         /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f080015;
+        public static final int AppBaseTheme=0x7f080016;
         public static final int AuthBackground=0x7f080005;
         public static final int AuthBoxLayout=0x7f080006;
         public static final int AuthButton=0x7f080007;
@@ -262,11 +261,12 @@ public final class R {
         public static final int ButtonAppTheme=0x7f08000c;
         public static final int DropDownListView_Ribbit=0x7f08000d;
         public static final int DropDownNav_Ribbit=0x7f08000e;
-        public static final int LightPurpleBackgroundStyle=0x7f08000f;
-        public static final int PopupMenu_Ribbit=0x7f080010;
-        public static final int ProgressBar_Ribbit=0x7f080011;
-        public static final int Theme_Ribbit=0x7f080012;
-        public static final int Theme_Ribbit_Overflow=0x7f080013;
-        public static final int Theme_Ribbit_Widget=0x7f080014;
+        public static final int GridImage=0x7f08000f;
+        public static final int LightPurpleBackgroundStyle=0x7f080010;
+        public static final int PopupMenu_Ribbit=0x7f080011;
+        public static final int ProgressBar_Ribbit=0x7f080012;
+        public static final int Theme_Ribbit=0x7f080013;
+        public static final int Theme_Ribbit_Overflow=0x7f080014;
+        public static final int Theme_Ribbit_Widget=0x7f080015;
     }
 }

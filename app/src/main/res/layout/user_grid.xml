@@ -11,10 +11,14 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:numColumns="3"
-        android:paddingBottom="@dimen/inbox_vertical_margin"
+        android:clipToPadding="false"
         android:horizontalSpacing="@dimen/user_grid_spacing"
-        android:verticalSpacing="@dimen/user_grid_spacing">
+        android:numColumns="auto_fit"
+        android:columnWidth="90dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/user_grid_spacing"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" >
     </GridView>
     
     <TextView 
@@ -23,4 +27,4 @@
         android:layout_height="wrap_content"
         android:text="@string/empty_friends_label" />
 
-</RelativeLayout><!-- From: file:/Users/cecilerobertm/AndroidStudioProjects/Ribbit1/app/src/main/res/layout/fragment_friends.xml -->
+</RelativeLayout>
